@@ -10,10 +10,10 @@ public class User {
 	private String major;
 	private int year;
 	private List<Integer> preferences;
-	private String meetingPreference;
+	private int meetingPreference;
 
 	public User(String username, String email, String password, String name, String bio, String major, int year,
-			List<Integer> preferences, String meetingPreference) {
+			List<Integer> preferences, int meetingPreference) {
 
 		this.username = username;
 		this.email = email;
@@ -78,14 +78,14 @@ public class User {
 		return preferences;
 	}
 
-	public String getMeetingPreference() {
+	public int getMeetingPreference() {
 		return meetingPreference;
 	}
 
 	// Method to check similarity with another StudyBuddy
 	public boolean compare(User other) {
 		if (!this.major.equals(other.major) || this.year != other.year
-				|| !this.meetingPreference.equals(other.meetingPreference)) {
+				|| !(this.meetingPreference == other.meetingPreference)) {
 			return false;
 		}
 

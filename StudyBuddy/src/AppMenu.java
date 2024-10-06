@@ -1,9 +1,10 @@
+package application;
+
 import java.util.Scanner;
 
 public class AppMenu {
 
 	Scanner input;
-	
 	
 	public AppMenu() {
 		input = new Scanner(System.in);
@@ -20,7 +21,6 @@ public class AppMenu {
 		input.nextLine();
 		
 		return option;
-		
 	}
 	public void showHomeMenu(User u) {
 		System.out.println("My Buddies\n");
@@ -43,6 +43,4 @@ public class AppMenu {
 		input.nextLine();
 		return option;
 	}
-	
-	
 }

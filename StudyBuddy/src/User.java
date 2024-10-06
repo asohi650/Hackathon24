@@ -68,9 +68,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", email=" + email + ", password=" + password + ", name=" + name
+		return "User username=" + username + ", email=" + email + ", password=" + password + ", name=" + name
 				+ ", bio=" + bio + ", major=" + major + ", year=" + year + ", preferences=" + preferences
-				+ ", meetingPreference=" + meetingPreference + "]";
+				+ ", meetingPreference=" + meetingPreference ;
 	}
 
 	public String getMajor() {

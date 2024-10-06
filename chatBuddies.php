@@ -9,6 +9,17 @@
 
 <body>
 
+<ul>
+    
+    <li style= "float:left"><a href= "homepage.html"> Home</a> </li>
+    <li style= "float:left"><a class= "active" href= "findAbuddy.html"> Find Buddies</a></li>
+    <li style= "float:left"><a href= "chat.html"> Chat</a></li>
+    <li style= "float:right"><a href= "logout.html"> LogOut</a></li>
+    
+    </ul>
+</nav>
+
+
     <div class="container">
         <div class="user-list"> 
             <h3>Users</h3>

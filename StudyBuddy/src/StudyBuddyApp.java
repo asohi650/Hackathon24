@@ -35,10 +35,13 @@ public class StudyBuddyApp {
 			// login
 			case 1:
 				login();
-
+				menu.showHomeMenu(currentUser);
+				navigate();
+				
 				
 			case 2:
 				signup();
+				navigate();
 				
 				break;
 
@@ -50,6 +53,29 @@ public class StudyBuddyApp {
 
 		}
 
+	}
+
+	private void navigate() {
+		int option = menu.showNavMenu();
+		boolean flag = true;
+		
+		while(flag) {
+			switch(option) {
+			case 1:
+				//find buddies --> so do the the matching thing
+				
+				break;
+			case 2:
+				// open chat box
+				
+				break;
+			case 3:
+				// save method this is where it writes and logs out
+				break;
+			}
+		}
+		
+		
 	}
 
 	private void signup() {

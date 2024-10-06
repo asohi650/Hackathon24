@@ -1,0 +1,117 @@
+html{
+    font-size: calc(15px + 0.004vw); 
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+}
+
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.white{
+    color: #FFFFFF;
+}
+
+header{
+    height: 140px;
+    background-color:darkslategray;
+    color: white;
+}
+
+p {
+    padding: 0em 1rem;
+}
+
+
+h1,h2, a{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 1rem;
+}
+
+h1 {
+    padding: 40px 1rem;
+}
+
+article {
+    border: 2px solid var(--focusBlue);
+    width: 95%;
+}
+
+article h1, article h2 {
+    background-color:cadetblue
+}
+
+
+
+/* ALWAYS PUT YOUR MEDIA QUERIES AT THE END OF YOUR css FILE */
+/*phone screen layout*/
+@media screen and (max-width: 769px) {
+    header, nav, article{
+        width:100%;
+    }
+
+    article {
+        margin: 1rem;
+        padding-top: 20px;
+        width: 92%;
+    }
+
+    #article1 {
+        height:30%;
+    }
+    
+    #article2 {
+        height:30%;
+    }
+    
+    header h1{
+        text-align: center;  
+    }
+
+    .logo {
+        display:none;
+    }
+    
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;   
+    }
+
+}
+    /*larger screen layout*/
+    @media screen and (min-width: 770px) {
+
+        main{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        article {
+            margin: 1rem;
+        }
+        
+        main div {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #article1 {
+            grid-column-start: 2;
+            grid-row: 2;
+            grid-column-end: 4;
+
+        }
+        
+        #article2 {
+            grid-column-start: 4;
+            grid-row: 2;
+            grid-column-end: 6;
+    
+        }
+        
+        
+    }
+        
+ 

@@ -11,6 +11,8 @@ public class User {
 	private int year;
 	private List<Integer> preferences;
 	private int meetingPreference;
+	private List<User> myBuddies;
+	private int matchCount;
 
 	public User(String username, String email, String password, String name, String bio, String major, int year,
 			List<Integer> preferences, int meetingPreference) {
@@ -24,6 +26,7 @@ public class User {
 		this.year = year;
 		this.preferences = preferences;
 		this.meetingPreference = meetingPreference;
+		
 	}
 
 	public String getUsername() {
@@ -113,5 +116,56 @@ public class User {
 		System.out.println("Name: " + name);
 		System.out.println("Bio: " + bio);
 	}
+	public void matches(User other) {
+		
+
+		// Reset the rating based on each comparison cycle
+
+		this.matchCount = 1;
+
+
+
+		// Check for matching study year
+
+		if (this.year == other.year) {
+
+			this.matchCount++;
+
+		}
+
+
+
+		// Check for matching meeting preference
+
+		if (this.meetingPreference == 3 || other.getMeetingPreference() == 3
+
+				|| this.meetingPreference == other.getMeetingPreference()) {
+
+			this.matchCount++;
+
+		}
+
+
+
+		// Check matching preferences (study methods)
+
+		for (Integer preference : this.preferences) {
+
+			if (other.preferences.contains(preference)) {
+
+				this.matchCount++;
+
+			}
+
+		}
+
+		
+
+		this.matchCount = this.matchCount * 100 / (3 + other.getPreferences().size());
+
+	}
+	
+
+
 
 }

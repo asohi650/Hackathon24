@@ -23,7 +23,7 @@ public class StudyBuddyApp {
 
 	private void launchApplication() {
 
-		System.out.println("Welcome to the Study Buddy App!");
+		System.out.println("Welcome to the Study Buddy!");
 		System.out.println("login or sign up?");
 
 		boolean flag = true;
@@ -36,7 +36,7 @@ public class StudyBuddyApp {
 			case 1:
 				login();
 
-				// signup
+				
 			case 2:
 				signup();
 				

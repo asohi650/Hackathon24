@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkslategray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+ li{
+    float: left;
+ }
+
+ li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 55px;
+    text-decoration: none;
+    font-size: 14;
+ }
+
+
+ .active{
+    background-color:cadetblue
+ }
+
+ .sidenav{
+    height: 100%;
+    width:150px ;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color:rgba(128, 161, 161, 0.627);
+    padding-top: 0px;
+ }
+
+ .sidenav a{
+    padding: 15px 25px;
+    text-decoration:none;
+    font-size: 20x;
+    color: white;
+    display: block;
+
+ }
+
+ .sidenav a.active{
+    background-color: rgba(128, 161, 161, 0.271);
+ }

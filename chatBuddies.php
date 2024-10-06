@@ -7,37 +7,31 @@
     <title>Study Buddy Chat</title>
 </head>
 
-<body>
-
-<ul>
-    
-    <li style= "float:left"><a href= "homepage.html"> Home</a> </li>
-    <li style= "float:left"><a class= "active" href= "findAbuddy.html"> Find Buddies</a></li>
-    <li style= "float:left"><a href= "chat.html"> Chat</a></li>
-    <li style= "float:right"><a href= "logout.html"> LogOut</a></li>
-    
-    </ul>
-</nav>
-
+<body class = "chatBody">
+    <nav>
+        <ul>    
+            <li style= "float:left"><a href= "homepage.html"> Home</a> </li>
+            <li style= "float:left"><a href= "findAbuddy.html"> Find Buddies</a></li>
+            <li style= "float:left"><a href= "chatBuddies.php" class= "active"> Chat</a></li>
+            <li style= "float:right"><a href= "logout.html"> LogOut</a></li>
+            </ul>
+    </nav>
 
     <div class="container">
         <div class="user-list"> 
             <h3>Users</h3>
             <ul id="user-list">
-                <!-- Dynamically populated user list -->
                 <?php
                 $users = ['User1', 'User2', 'User3']; // Replace with actual user data retrieval
                 foreach ($users as $user) {
-                    echo "<li><a href='#' onclick=\"openPrivateChat('$user')\">$user</a></li>";
+                    echo "<li><a href='#' onclick=\"openPrivateChat('$user')\">$user</a></li><br>";
                 }
                 ?>
             </ul>
         </div>
 
         <div class="chat-container">
-            <!-- Private Chat Sections for Each User -->
             <div id="chat-sections">
-                <!-- Dynamically created chat sections -->
                 <?php
                 foreach ($users as $user) {
                     echo "<div id='chat-$user' class='private-chat' style='display: none;'>

@@ -66,6 +66,13 @@ public class User {
 		this.bio = bio;
 	}
 
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", email=" + email + ", password=" + password + ", name=" + name
+				+ ", bio=" + bio + ", major=" + major + ", year=" + year + ", preferences=" + preferences
+				+ ", meetingPreference=" + meetingPreference + "]";
+	}
+
 	public String getMajor() {
 		return major;
 	}

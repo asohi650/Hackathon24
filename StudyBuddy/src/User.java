@@ -1,4 +1,4 @@
-package application;
+
 
 import java.util.List;
 
@@ -10,15 +10,7 @@ public class User implements Comparable<User> {
 	private String password;
 	private String name;
 	private String bio;
-<<<<<<< HEAD
-=======
-	private String major;
-	private int year;
-	private List<Integer> preferences;
-	private int meetingPreference;
-	private List<User> myBuddies;
-	private int matchCount;
->>>>>>> d6a1456d976ce1f9b9714145ad87bbdff2b9aec1
+
 
 	// Matching criteria fields
 	private String major;
@@ -179,54 +171,6 @@ public class User implements Comparable<User> {
 		System.out.println("Bio: " + bio);
 		System.out.println("Major: " + major);
 		System.out.println("Year: " + yearOfStudy);
-	}
-	public void matches(User other) {
-		
-
-		// Reset the rating based on each comparison cycle
-
-		this.matchCount = 1;
-
-
-
-		// Check for matching study year
-
-		if (this.year == other.year) {
-
-			this.matchCount++;
-
-		}
-
-
-
-		// Check for matching meeting preference
-
-		if (this.meetingPreference == 3 || other.getMeetingPreference() == 3
-
-				|| this.meetingPreference == other.getMeetingPreference()) {
-
-			this.matchCount++;
-
-		}
-
-
-
-		// Check matching preferences (study methods)
-
-		for (Integer preference : this.preferences) {
-
-			if (other.preferences.contains(preference)) {
-
-				this.matchCount++;
-
-			}
-
-		}
-
-		
-
-		this.matchCount = this.matchCount * 100 / (3 + other.getPreferences().size());
-
 	}
 	
 

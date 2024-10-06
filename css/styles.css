@@ -5,13 +5,37 @@ body {
     height: 100vh;
     margin: 0;
 }
-nav {
-    margin-bottom: 20px;
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkslategray;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+ul {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 55px;
+    text-decoration: none;
+    font-size: 14;
+}
+
+
 
 .container {
     display: flex;
     flex: 1;
+    margin-top: 50px;
 }
 
 .user-list {
@@ -57,9 +81,3 @@ nav {
     display: block;
     margin-bottom: 5px;
 }
-
-
-ul {
-    list-style: none;
-    }
-

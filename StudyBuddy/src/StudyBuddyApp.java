@@ -11,6 +11,7 @@ public class StudyBuddyApp {
 	private static List<User> users;
 	AppMenu menu;
 	Scanner input = new Scanner(System.in);
+	User currentUser;
 
 	public StudyBuddyApp() throws IOException {
 		users = new ArrayList<>();
@@ -37,7 +38,8 @@ public class StudyBuddyApp {
 
 				// signup
 			case 2:
-
+				signup();
+				
 				break;
 
 			default:
@@ -50,11 +52,56 @@ public class StudyBuddyApp {
 
 	}
 
+	private void signup() {
+		System.out.println("Create a username: ");
+		String inputUser = input.nextLine().trim();
+		
+		for (User u : users) {
+			if (u.getUsername().equals(inputUser)) {
+				System.out.println("This username is taken please try again");
+				signup();
+			} else {
+				String username = inputUser;
+				
+			}
+		}
+		System.out.println("Enter your full name: ");
+		String name = input.nextLine().trim();
+		
+		System.out.println("Create a password: ");
+		String password = input.nextLine().trim();
+		
+		System.out.println("Enter your email: ");
+		String email = input.nextLine().trim();
+		
+		
+		
+		
+	}
+
 	private void login() {
 		System.out.println("Enter username: ");
 		String username = input.nextLine().trim();
 		System.out.println("Enter password: ");
 		String password = input.nextLine().trim();
+
+		User user;
+
+		for (User u : users) {
+			if (u.getUsername().equals(username)) {
+				user = u;
+				if (user.getPassword().equals(password)) {
+					System.out.println("Login successful!");
+					currentUser = user;
+					break;
+				}
+
+			} else {
+				System.out.println("Username or password incorrect");
+				login();
+			}
+
+		}
 
 	}
 
@@ -67,7 +114,6 @@ public class StudyBuddyApp {
 	 */
 	private void loadUsers() throws IOException {
 		File db = new File(FILE_PATH);
-
 
 		String currentLine;
 		String[] splittedLine;
@@ -98,16 +144,12 @@ public class StudyBuddyApp {
 					User user = new User(username, password, email, name, bio, major, year, preferences,
 							meetingPreference);
 					users.add(user);
-					
-			
-					
-					}
-					
-				}
-			}
 
+				}
+
+			}
 		}
 
 	}
 
-
+}
